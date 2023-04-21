@@ -3,6 +3,8 @@ CFLAGS = -O3 -g -funroll-loops -ftree-vectorize -fopenmp -mfma -mavx2 -mavx512f 
 LIBS = -lllib -lntl -lgmp -lm -lgf2x
 LIBDIR = -I$(HOME)/work/packages/include/llib -L$(HOME)/work/packages/lib
 
+#llib.a will be soon updated
+
 all: test
 
 test: test.cpp $(OBJ)
