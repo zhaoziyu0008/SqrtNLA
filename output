@@ -1,0 +1,48 @@
+$ ./test L_700
+
+## input L_700
+## output a vec of length 852419
+## 8 threads used, the performance is in the same magnitude with the State of art algorithms.
+
+params analyzing begin...
+params analyzing done. d = 70, goal_length = 880000
+expect_tail_length = 394000, expect_dual_length = 1/202020, expect improve ratio = 1.2895, expect_dualtest_alpha = 0.5206, expect_mean_gap = 0.001124, expect_one_sigma_sum = 4397
+distinguish strategy: num_step = 3, k = [1.3890, 3.2393, 6.3917], s = [-0.0226, 1.2180, 2.3871]
+
+sie ving for short dual vecs begin...
+done. time = 8.487206s, 1/avg_length = [201456, 196308, 191995], 1/min_length = [256519, 256519, 256519], 1/max_length = [199399, 194142, 189675]
+
+sie ving for short tail vecs begin...
+done. time = 15.406689s, avg_length = 282660, min_length = 245109, max_length = 286973
+
+the first stage of filtering begin, 126866432 pairs will be test by 8448 dual vecs, bound = 0.08219, 10026560 pairs expect to pass
+begin create dot_mat...done, time = 0.249917s
+begin first round dual test...
+done. time = 20.480715s, found 10064557 pairs in total, speed = 52330.576229 MFLOPS
+
+the second stage of filtering begin, 10064557 pairs will be test by 46080 dual vecs, bound = 0.08273, 217603 pairs expect to pass
+begin create dot_mat...done, time = 2.261725s
+begin second round dual test...
+final stage of filtering begin, 422080 pairs will be test by 179200 dual vecs, bound = 0.08283, 13 pairs expect to pass
+begin create dot_mat...done, time = 9.688726s
+begin final round dual test...
+final check begin, 963 pairs will be checked, goal = 880000.00000
+sol 46, head = 876170.35, tail = 430009.27, norm = 976003.31
+sol 65, head = 808420.23, tail = 366495.54, norm = 887616.05
+sol 167, head = 918329.29, tail = 390914.54, norm = 998069.57
+sol 205, head = 916021.97, tail = 425608.27, norm = 1010068.64
+sol 220, head = 906265.49, tail = 399453.22, norm = 990393.87
+sol 280, head = 887692.79, tail = 400203.48, norm = 973735.75
+sol 376, head = 923480.57, tail = 400097.05, norm = 1006426.36
+sol 417, head = 757599.80, tail = 390719.00, norm = 852419.38
+sol 472, head = 866783.72, tail = 371163.88, norm = 942908.61
+sol 479, head = 925726.75, tail = 410450.38, norm = 1012639.88
+sol 530, head = 814340.83, tail = 391185.05, norm = 903425.00
+sol 583, head = 928571.48, tail = 370383.74, norm = 999714.52
+sol 656, head = 916388.66, tail = 376795.52, norm = 990829.48
+sol 733, head = 911528.76, tail = 370454.20, norm = 983931.39
+sol 760, head = 824112.77, tail = 404646.09, norm = 918096.03
+sol 769, head = 879046.73, tail = 377290.32, norm = 956593.51
+sol 838, head = 865849.84, tail = 388436.66, norm = 948988.40
+final check done, time = 59.312887s, total time = 163.092921s, found 1 goal vecs, length = 
+[852419]
